@@ -1,0 +1,11 @@
+{
+  "name": "class-2",
+  "version": "1.0.0",
+  "description": "- [Table of Contents](#table-of-contents)\r   - [What is Node.js](#what-is-nodejs)\r   - [Installing Node.js and NPM](#installing-nodejs-and-npm)\r   - [Working With node.js and npm](#working-with-nodejs-and-npm)\r   - [File system Handling](#file-system-handling)\r - [Link For the Video](#link-for-the-video)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ammar",
+  "license": "ISC"
+}
