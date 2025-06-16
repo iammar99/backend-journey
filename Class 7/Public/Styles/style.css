@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    background-color: #0e1117;
+    color: #a6acb7;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #fff;
+}
+
+
+form {
+    background-color: #262730;
+    padding: 30px 50px;
+    border-radius: 13px;
+}
+
+a.delete {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a.card-text {
+    color: #0064ff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a.card-edit {
+    color: #5f6267;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* --------------- Show ------------ */
+
+.container .row .col .card {
+    background-color: #262730;
+    max-width: fit-content;
+    min-width: 31%;
+    min-height: 27vh;
+    margin: auto;
+    color: #fff; 
+    padding: 29px 36px;
+}   
+
+
+a.home {
+    color: #0064ff;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 15px;
+}
+
