@@ -86,24 +86,37 @@ app.post("/edit", (req, res) => {
     const filePath = path.join(__dirname, "Files", req.body.oldTitle);
     const newFilePath = path.join(__dirname, "Files", req.body.title);
     console.log(filePath)
+    if (req.body.oldTitle == req.body.title) {
+        fs.writeFile(`${newFilePath}.txt`, req.body.details, (err) => {
+            if (err) {
+                console.log(err)
+                return res.status(404).send("File not found");
+            }
+            else {
+                res.redirect("/")
+            }
+        })
+    }
+    else {
 
-    fs.rename(`${filePath}.txt`, `${newFilePath}.txt`, (err) => {
-        if (err) {
-            console.log(err)
-            return res.status(404).send("File not found");
-        }
-        else{
-            fs.writeFile(`${newFilePath}.txt`,req.body.details,(err)=>{
-                if(err){
-                    console.log(err)
-                    return res.status(404).send("File not found");
-                }
-                else{
-                    res.redirect("/")
-                }
-            })
-        }
-    })
+        fs.rename(`${filePath}.txt`, `${newFilePath}.txt`, (err) => {
+            if (err) {
+                console.log(err)
+                return res.status(404).send("File not found");
+            }
+            else {
+                fs.writeFile(`${newFilePath}.txt`, req.body.details, (err) => {
+                    if (err) {
+                        console.log(err)
+                        return res.status(404).send("File not found");
+                    }
+                    else {
+                        res.redirect("/")
+                    }
+                })
+            }
+        })
+    }
 })
 
 
