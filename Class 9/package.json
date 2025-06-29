@@ -1,0 +1,16 @@
+{
+  "name": "class-9",
+  "version": "1.0.0",
+  "description": "- [Table of Contents](#table-of-contents)\r   - [Installation of mongoDB](#installation-of-mongodb)\r   - [Creating Model](#creating-model)\r - [Link For the Video](#link-for-the-video)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1"
+  }
+}
