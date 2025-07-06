@@ -1,0 +1,16 @@
+{
+  "name": "class-13",
+  "version": "1.0.0",
+  "description": "- [Table of Contents](#table-of-contents)\r   - [Data Association](#data-association)\r   - [Referencing](#referencing)\r   - [Embedding](#embedding)\r - [Link For the Video](#link-for-the-video)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1"
+  }
+}
