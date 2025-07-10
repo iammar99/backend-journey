@@ -1,0 +1,239 @@
+/* --------- Variables --------- */
+:root {
+  --header_color: #373751;
+}
+
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+  background-color: rgb(42, 42, 59);
+}
+
+
+/* -------- Navbar --------- */
+
+nav.navbar.navbar-expand-lg {
+  background-color: var(--header_color);
+}
+
+
+nav.navbar.navbar-expand-lg a {
+  color: white;
+}
+
+
+button.navbar-toggler {
+  background-color: white;
+}
+
+/* -------- Navlinks --------- */
+
+
+nav.navbar.navbar-expand-lg a.nav-link {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+
+nav.navbar.navbar-expand-lg a.nav-link::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 7px;
+  bottom: 10px;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+nav.navbar.navbar-expand-lg a.nav-link:hover:after {
+  width: 77%;
+}
+
+
+/* -------- Acitve Navlinks --------- */
+
+
+a.nav-link.active {
+  font-weight: 700;
+}
+
+
+
+/* -------- Footer --------- */
+
+
+footer {
+  background-color: var(--header_color);
+}
+
+
+
+/* -------- Forms --------- */
+
+
+form {
+  width: 85%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px 35px;
+  margin: auto;
+}
+
+
+form a {
+  text-decoration: none;
+  color: var(--header_color);
+  position: relative;
+}
+
+form a:hover {
+  color: black;
+}
+
+form a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+form a:hover:after {
+  width: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+input[type="password"] {
+  transition: all 0.5s ease;
+}
+
+
+
+
+
+/* ------------- UIVERSE -------------- */
+
+/* ------- eye --------- */
+
+
+/* From Uiverse.io by catraco */
+/*------ Settings ------*/
+.container {
+  --color: #a5a5b0;
+  --size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+}
+
+svg.eye-slash,
+svg.eye {
+  right: 15px;
+  bottom: 10px;
+}
+
+.container .eye {
+  position: absolute;
+  animation: keyframes-fill .5s;
+}
+
+.container .eye-slash {
+  position: absolute;
+  animation: keyframes-fill .5s;
+  display: none;
+}
+
+/* ------ On check event ------ */
+.container input:checked~.eye {
+  display: none;
+}
+
+.container input:checked~.eye-slash {
+  display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+
+
+/* ------ Card ------ */
+
+
+.card {
+  background-color: var(--header_color);
+}
+
+
+a.delete {
+  text-decoration: none;
+  color: #ff0000;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+a.edit {
+  text-decoration: none;
+  color: #4f5b4f;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+a.like {
+  text-decoration: none;
+}
+
+span.likes-count {
+    font-size: 13px;
+    color: #0464a9;
+}
