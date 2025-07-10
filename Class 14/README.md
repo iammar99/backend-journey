@@ -40,6 +40,7 @@ This is a mini social media app . Here are some details about Project
   - Read
   - Update
   - Deletion 
+  - Like / Unlike
 - Protected Routes
 - Error Handling
 
