@@ -1,4 +1,4 @@
-# Class 14 <!-- omit in toc -->
+# Class 15 <!-- omit in toc -->
 
 
 
@@ -25,7 +25,6 @@ This is a mini social media app . Here are some details about Project
   - Bcrypt
   - Json web token
   - cookie
-  - Multer
 - MongoDB
   - CRUD
   - Data Assocciation
@@ -42,8 +41,6 @@ This is a mini social media app . Here are some details about Project
   - Update
   - Deletion 
   - Like / Unlike
-- Multer
-  - Profile pic update 
 - Protected Routes
 - Error Handling
 
@@ -55,4 +52,4 @@ This is a mini social media app . Here are some details about Project
 
 # Link For the Video 
 
-[Class 14](https://www.youtube.com/watch?v=8CAjzElJUiU&list=PLbtI3_MArDOkXRLxdMt1NOMtCS-84ibHH&index=17)
+[Class 15](https://www.youtube.com/watch?v=n1a2cITIVeQ&list=PLbtI3_MArDOkXRLxdMt1NOMtCS-84ibHH&index=20)

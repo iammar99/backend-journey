@@ -33,3 +33,10 @@ textarea.addEventListener("input", function () {
     this.style.height = this.scrollHeight + "px";
 });
 
+
+// -----------------------  Image form Submitted -----------------------
+
+
+document.getElementById("image").addEventListener("change", function () {
+    document.getElementById("imageUploadForm").submit();
+});

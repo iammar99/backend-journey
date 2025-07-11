@@ -8,11 +8,15 @@ const userSchema = mongoose.Schema({
     username: String,
     age: Number,
     posts: [{
-        type : mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Post"
-    }]
+    }],
+    profilePic: {
+        type: String,
+        default: "default.png"
+    }
 })
 
-const userModel = mongoose.model("User",userSchema)
+const userModel = mongoose.model("User", userSchema)
 
 module.exports = userModel

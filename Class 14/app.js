@@ -6,6 +6,7 @@ const cookieParser = require("cookie-parser")
 const path = require("path")
 const user = require("./Models/UserModel")
 const post = require("./Models/PostSchema")
+const upload = require("./Config/multerConfig")
 
 
 // ------------------------------------- MiddleWares -------------------------------------
@@ -90,10 +91,10 @@ app.get("/post", isLoggedIn, async (req, res) => {
 app.get("/liked-posts", isLoggedIn, async (req, res) => {
     const token = req.cookies.token
     let data = jwt.verify(token, "shhhhh")
-    let posts = await post.find({ likes : data.id }).populate({ path: "user", select: "username" })
+    let posts = await post.find({ likes: data.id }).populate({ path: "user", select: "username" })
     // console.log(posts.user)
     // res.send(posts[0].user)
-    res.render("likedPosts", { token, posts})
+    res.render("likedPosts", { token, posts })
 })
 
 
@@ -228,6 +229,20 @@ app.post("/post", async (req, res) => {
 app.post("/edit/:id", async (req, res) => {
     const postFound = await post.updateOne({ _id: req.params.id }, { $set: { postText: req.body.post } });
     res.redirect("/post")
+})
+
+// Upload image
+
+app.post("/upload", upload.single('image'),async (req, res) => {
+    const file = req.file
+    console.log(file)
+    const data = jwt.verify(req.cookies.token, "shhhhh")
+    const { email} = data
+    const userFound = await user.findOne({ email })
+    userFound.profilePic = file.filename
+    await userFound.save()
+    console.log(userFound)
+    res.send(errorFunction("Image uploading", "Redirecting", "profile"))
 })
 
 // ------------------------------------- Error function -------------------------------------

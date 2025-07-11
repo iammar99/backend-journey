@@ -234,6 +234,33 @@ a.like {
 }
 
 span.likes-count {
-    font-size: 13px;
-    color: #0464a9;
+  font-size: 13px;
+  color: #0464a9;
+}
+
+
+
+/* ------ Image ------ */
+
+
+.profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.pencil-icon {
+    position: absolute;
+    top: -15px;
+    right: -13px;
+    cursor: pointer;
+}
+
+.pencil-icon i {
+    color: black;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 14px;
 }
