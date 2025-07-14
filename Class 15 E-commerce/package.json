@@ -1,0 +1,20 @@
+{
+  "name": "E-Commerce-Website",
+  "version": "1.0.0",
+  "description": "- [Table of Contents](#table-of-contents)\r   - [Introduction](#introduction)\r     - [Techs Used](#techs-used)\r     - [Functionalities](#functionalities)\r - [Link For the Video](#link-for-the-video)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ammar",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.3",
+    "multer": "^2.0.1"
+  }
+}
